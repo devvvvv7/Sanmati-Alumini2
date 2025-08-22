@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanmati Alumni Network - Legacy Since 1982</title>
+  <meta name="description" content="Official alumni network of Sanmati H.S. School - connecting over 100,000+ alumni worldwide since 1982">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <h2>Sanmati Alumni</h2>
+      </div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#directory">Directory</a>
+        <a href="#events">Events</a>
+        <a href="#register">Register</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1 class="hero-title">Sanmati Alumni Network</h1>
+        <p class="hero-subtitle">Since 1982 — A Legacy of Excellence & Brotherhood</p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary" onclick="scrollToSection('directory')">Browse Alumni</button>
+          <a href="#register" class="btn btn-secondary">Register Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Principal's Message -->
+  <section id="principal" class="principal-section">
+    <div class="container">
+      <h2>Principal’s Message</h2>
+      <p>
+        “Dear Alumni, you are the pride of Sanmati H.S. School. Your achievements inspire the next generation and strengthen our legacy. 
+        We invite you to stay connected, contribute, and celebrate our journey together.”
+      </p>
+      <p><strong>- Principal, Sanmati H.S. School</strong></p>
+    </div>
+  </section>
+
+  <!-- Alumni Directory -->
+  <section id="directory" class="directory-section">
+    <div class="container">
+      <h2>Alumni Directory</h2>
+      <div id="alumni-list" class="alumni-list">
+        <!-- Alumni cards will load dynamically from Google Sheet -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events" class="events-section">
+    <div class="container">
+      <h2>Upcoming Events</h2>
+      <p>Stay tuned for reunions, guest lectures, and networking events for alumni across the globe.</p>
+    </div>
+  </section>
+
+  <!-- Registration Section -->
+  <section id="register" class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>Alumni Registration</h2>
+        <p>Fill in your details to join the Sanmati Alumni Network</p>
+
+        <!-- Hidden iframe prevents redirect -->
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSdj3FXgioJMOd_SKaK9t0-_L2YNHR3q6Cr_DjnAnYQm0YOHOg/formResponse" 
+              method="POST" target="hidden_iframe" onsubmit="afterRegister()" class="newsletter-form">
+
+          <div class="form-row">
+            <input type="text" name="entry.1240751609" placeholder="Full Name" required>
+            <input type="email" name="entry.70010307" placeholder="Email Address" required>
+          </div>
+
+          <div class="form-row">
+            <input type="text" name="entry.39672991" placeholder="Batch (e.g., 2015-2019)" required>
+            <input type="text" name="entry.914834842" placeholder="Current Profession" required>
+          </div>
+
+          <div class="form-row">
+            <input type="text" name="entry.1738448058" placeholder="Company / Organization">
+            <input type="text" name="entry.1371089527" placeholder="Location (City, Country)">
+          </div>
+
+          <button type="submit" class="btn btn-secondary">Register</button>
+        </form>
+
+        <p style="margin-top:10px; font-size:0.9rem; color:#64748b;">
+          ⚡ Your registration will be securely stored in our Google Sheet and displayed on this site.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Sanmati H.S. School</h3>
+          <p>Building futures since 1982</p>
+          <div class="footer-motto">"Live & Let Live"</div>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Information</h4>
+          <p>📧 alumni@sanmati.edu.in</p>
+          <p>📞 +91 98765 43210</p>
+          <p>📍 Sanmati Road, Education District</p>
+          <p>City, State - 123456</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a>
+          <a href="#directory">Alumni Directory</a>
+          <a href="#events">Events</a>
+          <a href="#register">Register</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">LinkedIn</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 1982–2025 Sanmati Alumni Network. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
